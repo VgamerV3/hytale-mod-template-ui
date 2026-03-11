@@ -1,0 +1,55 @@
+$C = "Common.ui";
+
+$C.@PageOverlay {}
+
+$C.@Container {
+  Anchor: (Width: 860, Height: 520);
+
+  #Title {
+    Group {
+      $C.@Title {
+        @Text = "Hytale Depot UI Mod Template";
+      }
+    }
+  }
+
+  #Content {
+    LayoutMode: Top;
+
+    Label #StatusLine {
+      Anchor: (Bottom: 10);
+      Style: (FontSize: 14, TextColor: #d6e0ee, RenderBold: true, Wrap: true);
+    }
+
+    Label #HintLine {
+      Anchor: (Bottom: 24);
+      Style: (FontSize: 12, TextColor: #8ea4bf, Wrap: true);
+    }
+
+    Group #Buttons {
+      LayoutMode: Left;
+
+      $C.@SecondaryTextButton #InfoBtn {
+        Anchor: (Width: 160, Height: 38, Right: 8);
+        Text: "Plugin Info";
+      }
+
+      $C.@SecondaryTextButton #HeartbeatBtn {
+        Anchor: (Width: 180, Height: 38, Right: 8);
+        Text: "Heartbeat";
+      }
+
+      $C.@SecondaryTextButton #ToggleBtn {
+        Anchor: (Width: 180, Height: 38, Right: 8);
+        Text: "Toggle Flag";
+      }
+
+      $C.@CancelTextButton #CloseBtn {
+        Anchor: (Width: 140, Height: 38);
+        Text: "Close";
+      }
+    }
+  }
+}
+
+$C.@BackButton {}

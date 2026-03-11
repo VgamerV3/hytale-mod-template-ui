@@ -1,0 +1,11 @@
+{
+  "id": "hd.ui.mod.main",
+  "title": "Hytale Depot UI Mod Template",
+  "description": "Safe placeholder layout path for UI mod demos. Commands drive interaction state.",
+  "buttons": [
+    { "id": "info", "label": "Plugin Info" },
+    { "id": "heartbeat", "label": "Heartbeat Status" },
+    { "id": "toggle", "label": "Toggle Demo Flag" },
+    { "id": "close", "label": "Close" }
+  ]
+}
