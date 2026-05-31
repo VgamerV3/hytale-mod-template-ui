@@ -56,7 +56,7 @@ public final class UiModTemplate {
     Store<EntityStore> store = playerEntityRef.getStore();
     EntityStore entityStore = store.getExternalData();
     World world = entityStore.getWorld();
-    String actor = String.valueOf(ctx.sender().getDisplayName());
+    String actor = String.valueOf(ctx.sender().getUsername());
 
     world.execute(
         () -> {

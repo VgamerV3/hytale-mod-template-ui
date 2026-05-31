@@ -1,15 +1,15 @@
 {
     "Group": "HytaleDepot",
     "Name": "UiModTemplate",
-    "Version": "1.0.0",
-    "Description": "Hytale Depot mod template for ui.",
+    "Version": "1.1.0",
+    "Description": "Hytale 0.5.3 mod starter for custom UI flows.",
     "Authors": [
         {
             "Name": "Hytale Depot"
         }
     ],
     "Website": "https://github.com/VgamerV3/hytale-mod-template-ui",
-    "ServerVersion": "2026.02.19-1a311a592",
+    "ServerVersion": "0.5.3",
     "Dependencies": {
         
     },

@@ -1,6 +1,5 @@
 package net.hytaledepot.templates.mod.ui;
 
-import com.hypixel.hytale.protocol.GameMode;
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.command.system.CommandContext;
 import com.hypixel.hytale.server.core.command.system.basecommands.CommandBase;
@@ -102,7 +101,7 @@ public final class UiModPlugin extends JavaPlugin {
     private UiModOpenCommand() {
       super("hduimod", "Runs UI mod actions: open, info, heartbeat, toggle, close.");
       setAllowsExtraArguments(true);
-      this.setPermissionGroup(GameMode.Adventure);
+      setPermissionGroups("hytale:Adventurer");
     }
 
     @Override
@@ -123,7 +122,7 @@ public final class UiModPlugin extends JavaPlugin {
       if ("open".equals(action)) {
         result = service.openPage(ctx, heartbeatTicks.get());
       } else {
-        String sender = String.valueOf(ctx.sender().getDisplayName());
+        String sender = String.valueOf(ctx.sender().getUsername());
         result = service.runAction(sender, action, heartbeatTicks.get());
       }
       ctx.sendMessage(Message.raw(result));
@@ -134,12 +133,12 @@ public final class UiModPlugin extends JavaPlugin {
     private UiModStatusCommand() {
       super("hduimodstatus", "Shows diagnostics for UiModPlugin.");
       setAllowsExtraArguments(true);
-      this.setPermissionGroup(GameMode.Adventure);
+      setPermissionGroups("hytale:Adventurer");
     }
 
     @Override
     protected void executeSync(CommandContext ctx) {
-      String sender = String.valueOf(ctx.sender().getDisplayName());
+      String sender = String.valueOf(ctx.sender().getUsername());
       String line =
           "[UiMod] lifecycle="
               + lifecycle
